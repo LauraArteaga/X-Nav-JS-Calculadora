@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="CalculadoraBinariaSimple.css" />
+    <title> Calculadora Binaria </title>
+    <script type="text/javascript" charset="utf-8">
+      var op = "";
+      var op1 = "";
+      var op2 = "";
+
+      function cero(){
+        var element = document.getElementById('display');
+        element.innerHTML = "0";
+        op = element.innerHTML;
+      };
+
+      function uno(){
+        var element = document.getElementById('display');
+        element.innerHTML = "1";
+        op = element.innerHTML;
+      };
+
+      function mas(){
+        op1 = parseInt(op, 2);
+
+        var element = document.getElementById('display');
+        element.innerHTML = "";
+
+      };
+
+      function igual(){
+        var op2 = parseInt(op, 2);
+        var result = (op1 + op2).toString(2);
+        var element = document.getElementById('display');
+
+        element.innerHTML = result;
+      };
+
+    </script>
+  </head>
+
+  <body class='calculadora'>
+	  
+	<p id="display"></p>
+    <input id='cero' type ='button' value = '0' onclick="javascript:cero()"/>
+    <input id='uno' type ='button' value = '1' onclick="javascript:uno()"/>
+    <input id='mas' type ='button' value = '+' onclick="javascript:mas()"/>
+    <input id='igual' type ='button' value = '=' onclick="javascript:igual()"/>
+
+  </body>
+</html>
